@@ -54,11 +54,11 @@ Run the script again.
 After that, make sure first that your NetBox Docker is running. You´ll be able to connect to your NetBox instance from a browser either with: **localhost:[your_port], [internal_IP]:[your_port], [WSL_IP]:[your_port] or [external_IP]:[your_port]**.
 
 ## Public Access
-In case you´re the only one who can access the NetBox instance from your machine only and no other host can, then probably you need to create a new Firewall Inbound Rule to give access to other hosts to connect to your NetBox by running the following command:
+In case you´re the only one who can access the NetBox instance from your machine only and no other host can, then you´ll need to create a new Firewall Inbound Rule to give access to other hosts to connect to your NetBox by running the following command:
 
     New-NetFirewallRule -DisplayName "[choose_name]" -Direction Inbound -Action Allow -Protocol TCP -LocalPort [your_port]
     
-#### or manually: 
+or manually: 
 
 `Windows Menu -> Settings -> Update & Security -> Windows Security -> Open Windows Security -> Firewall & network protection -> Advanced settings -> Inbound Rules -> New Rule -> Port -> Give only wished port -> Allow the connection -> Apply on all network locations and domains -> Give a name -> Finish`
 

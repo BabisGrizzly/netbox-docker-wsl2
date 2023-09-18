@@ -16,30 +16,32 @@ After making sure that you can connect to your NetBox instance with your localho
 
 ## Port Forwarding
 
-Create a PowerShell script with the following commands:
+### Create a PowerShell script with the following commands:
 
     netsh interface portproxy delete v4tov4 listenport=[your_port] listenaddress=0.0.0.0
     wsl -u [WSL_user] hostname -I | Set-Variable -Name "IP"
     $IP=$IP.replace(" ","")
     netsh interface portproxy add v4tov4 listenport=[your_port] listenaddress=0.0.0.0 connectport=[your_port] connectaddress=$IP
     
-Make sure you run the script with admin privileges:
+### Make sure you run the script with admin privileges:
 
     powershell.exe -File "[path_to_script]\[name_of_script].ps1"
 
-In case you get the following error:
+#### In case you get the following error:
 
     File cannot be loaded because the execution of scripts is disabled on this system. Please see "get-help about_signing" for more details.
 
-  Run the following command:
+  #### Run the following command:
 
     Set-ExecutionPolicy unrestricted
     
-Check your portproxy status with:
+Run the script again.
+    
+### Check your portproxy status with:
 
     netsh interface portproxy show all
    
-You should be able to see at least the following:
+#### You should be able to see at least the following:
 
     PS C:\> netsh interface portproxy show all
     
@@ -56,8 +58,8 @@ In case you´re the only one who can access the NetBox instance from your machin
 
     New-NetFirewallRule -DisplayName "[choose_name]" -Direction Inbound -Action Allow -Protocol TCP -LocalPort [your_port]
     
-or manually: 
+#### or manually: 
 
-`Windows Menu -> Settings -> Update & Security -> Windows Security -> Open Windows Security -> Firewall & network protection -> Advanced settings -> Inbound Rules -> New Rule -> Port -> Give only wished port -> Allow the connection -> Apply on all network locations and domains -> Give a name -> Finish`
+`Windows Menu -> Settings -> Update & Security -> Windows Security -> Open Windows Security -> Firewall & network protection -> Advanced settings -> Inbound Rules -> New Rule -> Port -> Give only wished port -> Allow the connection -> Apply on all network locations and domains -> Give a name -> Finish.`
 
 Congratulations, now others (on the same Network) will be able to connect to your NetBox instance.

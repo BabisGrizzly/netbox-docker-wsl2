@@ -43,11 +43,11 @@ You should be able to see at least the following:
 
     PS C:\> netsh interface portproxy show all
     
-    Listen on ipv4:             Connect to ipv4:
+    Listen on ipv4:      Connect to ipv4:
     
-    Address  Port         Address   Port
-    -------  -----------  --------  -----------
-    0.0.0.0  [your_port]  [WSL_IP]  [your_port]
+    Address Port         Address  Port
+    ------- -----------  -------- -----------
+    0.0.0.0 [your_port]  [WSL_IP] [your_port]
 
 After that, make sure first that your NetBox Docker is running. You´ll be able to connect to your NetBox instance from a browser either with: **localhost:[your_port], [internal_IP]:[your_port], [WSL_IP]:[your_port] or [external_IP]:[your_port]**.
 

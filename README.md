@@ -12,7 +12,7 @@ Make sure to follow the instructions, on how to use the WSL 2 based engine with 
 
 Follow the instructions step by step with [Getting Started with NetBox Docker](https://github.com/netbox-community/netbox-docker/wiki/Getting-Started) on your WSL terminal, as if it was a normal Linux environment.
 
-After making sure that you can connect to your NetBox instance with your localhost IP, then you could redirect an external IP (in this case, IP of your machine) with the internal IP of your WSL. (In case you´re setting the NetBox instance with public access).
+After making sure that you can connect to your NetBox instance with your localhost, internal or WSL IP, then you could redirect an external IP (in this case, IP of your machine) with the internal IP of your WSL. (In case you´re setting the NetBox instance with public access).
 
 ## Port Forwarding
 

@@ -60,6 +60,6 @@ In case you´re the only one who can access the NetBox instance from your machin
     
 #### or manually: 
 
-`Windows Menu -> Settings -> Update & Security -> Windows Security -> Open Windows Security -> Firewall & network protection -> Advanced settings -> Inbound Rules -> New Rule -> Port -> Give only wished port -> Allow the connection -> Apply on all network locations and domains -> Give a name -> Finish.`
+`Windows Menu -> Settings -> Update & Security -> Windows Security -> Open Windows Security -> Firewall & network protection -> Advanced settings -> Inbound Rules -> New Rule -> Port -> Give only wished port -> Allow the connection -> Apply on all network locations and domains -> Give a name -> Finish`
 
 Congratulations, now others (on the same Network) will be able to connect to your NetBox instance.

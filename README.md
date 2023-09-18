@@ -45,11 +45,11 @@ You should be able to see at least the following:
     
     Listen on ipv4:             Connect to ipv4:
     
-    Address         Port        Address         Port
-    --------------- ----------  --------------- ----------
-    0.0.0.0         8000        XXX.XXX.XXX.XXX 8000
+    Address  Port         Address   Port
+    -------  -----------  --------  -----------
+    0.0.0.0  [your_port]  [WSL_IP]  [your_port]
 
-After that, make sure first that your NetBox Docker is running. You´ll be able to connect to your NetBox instance from a browser either with: **localhost:[your_port], [internal_IP]:[your_port] or [external_IP]:[your_port]**.
+After that, make sure first that your NetBox Docker is running. You´ll be able to connect to your NetBox instance from a browser either with: **localhost:[your_port], [internal_IP]:[your_port], [WSL_IP]:[your_port] or [external_IP]:[your_port]**.
 
 ## Public Access
 In case you´re the only one who can access the NetBox instance from your machine only and no other host can, then probably you need to create a new Firewall Inbound Rule to give access to other hosts to connect to your NetBox by running the following command:

@@ -47,7 +47,7 @@ You should be able to see at least the following:
     
     Address         Port        Address         Port
     --------------- ----------  --------------- ----------
-    0.0.0.0         8000        172.17.111.250  8000
+    0.0.0.0         8000        XXX.XXX.XXX.XXX 8000
 
 After that, make sure first that your NetBox Docker is running. You´ll be able to connect to your NetBox instance from a browser either with: **localhost:[your_port], [internal_IP]:[your_port] or [external_IP]:[your_port]**.
 
